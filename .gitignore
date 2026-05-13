@@ -1,0 +1,13 @@
+.DS_Store
+*.xcuserstate
+*.xcodeproj/
+*.xcworkspace/
+DerivedData/
+.build/
+.swiftpm/
+
+node_modules/
+.env
+.env.local
+coverage/
+npm-debug.log*

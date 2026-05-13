@@ -1,0 +1,25 @@
+name: CreditCardAccountBook
+options:
+  bundleIdPrefix: com.moonlia07
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "15.0"
+packages:
+  LinkKit:
+    url: https://github.com/plaid/plaid-link-ios-spm.git
+    from: "6.0.0"
+targets:
+  CreditCardAccountBook:
+    type: application
+    platform: iOS
+    sources:
+      - path: CreditCardAccountBook
+    dependencies:
+      - package: LinkKit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.moonlia07.CreditCardAccountBook
+        INFOPLIST_FILE: CreditCardAccountBook/Supporting/Info.plist
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: 0.1.0
+        SWIFT_VERSION: 5.9

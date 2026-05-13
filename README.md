@@ -19,6 +19,33 @@ An iOS-first personal finance app that connects credit card and bank accounts, a
 - [Data Model](docs/data-model.md)
 - [Security And Privacy](docs/security-privacy.md)
 - [Implementation Roadmap](docs/implementation-roadmap.md)
+- [Development Guide](docs/development.md)
+
+## Codebase
+
+- [iOS app](apps/ios): SwiftUI app shell with Plaid Link integration points and core screens.
+- [API service](services/api): Node.js backend shell with Plaid endpoints, ledger aggregation, and benefit matching.
+
+## Quick Start
+
+Run the API service:
+
+```bash
+cd services/api
+cp .env.example .env
+npm test
+npm run dev
+```
+
+Generate the iOS Xcode project with XcodeGen:
+
+```bash
+cd apps/ios
+xcodegen generate
+open CreditCardAccountBook.xcodeproj
+```
+
+The API can run in mock mode without Plaid credentials. Add Plaid sandbox credentials to `services/api/.env` when you are ready to connect real Plaid Link flows.
 
 ## Important Product Assumptions
 
